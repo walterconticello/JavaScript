@@ -125,12 +125,19 @@ while (true) {
 // 666666
 // …….
 
-for (let i = 1; i <= 30; i++) {
-	let cadena = "";
-	for (let j = 1; j <= i; j++) {
-		cadena += i;
+const piramide2 = prompt("Ingresa un numero del 1 al 30");
+if (Number.isNaN(piramide2)) {
+	alert("Ingrese un número válido");
+} else if (piramide2 <= 0 || piramide2 > 30) {
+	alert("Ingrese un número válido");
+} else {
+	for (let i = 1; i <= piramide2; i++) {
+		let piramideCount = "";
+		for (let j = 1; j <= i; j++) {
+			piramideCount += i;
+		}
+		console.log(piramideCount);
 	}
-	console.log(cadena);
 }
 
 // 7- Haz un script que escriba una pirámide inversa de los números del 1 al número que indique el usuario (no mayor de 50)  de la siguiente forma : (suponiendo que indica 30).
